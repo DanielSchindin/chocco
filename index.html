@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<section id="section_about">
+	<section class="section_about">
 		<div class="container">
 			<header>
 				<nav class="menu">
@@ -26,27 +26,27 @@
 					</a>
 					<ul class="menu_list">
 						<li class="menu_item">
-							<a href="#main_info" class="menu_link">
+							<a data-scroll-to="about" class="menu_link">
 								О нас
 							</a>
 						</li>
 						<li class="menu_item">
-							<a href="#why" class="menu_link">
+							<a data-scroll-to="2" class="menu_link">
 								Почему CHOCCO
 							</a>
 						</li>
 						<li class="menu_item">
-							<a href="#bars" class="menu_link">
+							<a data-scroll-to="3" class="menu_link">
 								Батончики
 							</a>
 						</li>
 						<li class="menu_item">
-							<a href="#section_team" class="menu_link">
+							<a data-scroll-to="4" class="menu_link">
 								Команда
 							</a>
 						</li>
 						<li class="menu_item">
-							<a href="#section_order" class="menu_link">
+							<a data-scroll-to="5" class="menu_link">
 								Доставка
 							</a>
 						</li>
@@ -58,11 +58,11 @@
 				</nav>
 			</header>
 		</div>
-		<div id="main_info">
+		<div class="main_info">
 			<div class="content_about">
 				<h1 class="title">Натуральные шоколадные батончики</h1>
 				<p class="text_about">Наши батончики идеально подходят для тех, кто следит за своим здоровьем</p>
-				<button class="button" id="top" data-scroll-to="5">Заказать</button>
+				<button class="button" data-scroll-to="5">Заказать</button>
 			</div>
 			<div class="features_about">
 				<ul class="list_about">
@@ -79,14 +79,13 @@
 						<div class="features_about">Не портит фигуру</div>
 					</li>
 				</ul>
-				<button class="button" data-scroll-to="5" id="bottom">Заказать</button>
 			</div>
 			<img src="img/chocco.png" alt="Chocco _ Шоколадные батончики" id="about_img_chocco">
 			<img src="img/berries.png" alt="Chocco _ Шоколадные батончики" id="about_img_berries">
 		</div>
 	</section>
 
-	<section id="why">
+	<section class="why">
 		<div>
 			<h2 class="section_title">Почему Chocco?</h2>
 			<p class="desc_2">В нашем мире все происходит очень быстро, поэтому мы делаем батончики, которые удобно
@@ -134,7 +133,7 @@
 		<img src="img/berries_2.png" alt="berries" height="50%" class="why_berries">
 	</section>
 
-	<section id="bars">
+	<section class="bars">
 		<div class="carousel-wrapper">
 			<span id="item-1"></span>
 			<span id="item-2"></span>
@@ -167,8 +166,8 @@
 			
 			<div class="carousel-item item-2">
 				<div class="slide">
-					<h3 class="title_slide">Батончик "Гавайский пляж :)"</h3>
-					<div class="desc_slide">Разнообразные сухофрукты (манго, бананы, яблоки и семена кунжута).
+					<h3 class="title_slide">Батончик "Гранола виноград"</h3>
+					<div class="desc_slide">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
 					</div>
 					<div class="info_slide">
 						<div class="item_slide">
@@ -194,23 +193,14 @@
 		<img src="img/leaf_4.png" alt="berries" class="slide_img"/>
 	</section>	
 
-	<section id="section_team">
-		<script>
-			function show(idName) {
-				document.getElementById('desc_team_' + idName).classList.toggle('show');
-				document.getElementById('arrow_' + idName).classList.toggle('rotate');
-			}
-		</script>
+	<section class="section_team">
 		<h2 class="section_title">Команда</h2>
 		<ul class="list_team">
 			<li class="item_team">
 				<div class="photo_team" id="boris"></div>
 				<div class="text_team">
-					<div class="text_team_title">
-						<h3>Борис Федорович</h3>
-						<p class="arrow" id="arrow_boris" onclick="show('boris');">&#9658;</p>
-					</div>
-					<div class="desc_team" id="desc_team_boris">
+					<h3>Борис Федорович <!--<p class="arrow">&#9658;</p>--></h3>
+					<div class="desc_team">
 						<h4>Главный технолог</h4>
 						<p>Отвечает за вкусовые качества и калорийность.</p>
 					</div>
@@ -219,11 +209,8 @@
 			<li class="item_team">
 				<div class="photo_team low" id="alla"></div>
 				<div class="text_team">
-					<div class="text_team_title">
-						<h3>Алла Иванова</h3>
-						<p class="arrow" id="arrow_alla" onclick="show('alla');">&#9658;</p>
-					</div>
-					<div class="desc_team" id="desc_team_alla">
+					<h3>Алла Иванова</h3>
+					<div class="desc_team">
 						<h4>Специалист по упаковке</h4>
 						<p>Автор запоминающегося стиля наших батончиков.</p>
 					</div>
@@ -232,11 +219,8 @@
 			<li class="item_team">
 				<div class="photo_team" id="kirill"></div>
 				<div class="text_team">
-					<div class="text_team_title">
-						<h3>Кирилл Матросов</h3>
-						<p class="arrow" id="arrow_kirill" onclick="show('kirill');">&#9658;</p>
-					</div>
-					<div class="desc_team" id="desc_team_kirill">
+					<h3>Кирилл Матросов</h3>
+					<div class="desc_team">
 						<h4>Оператор</h4>
 						<p>С радостью поможет подобрать батончики и оформить заказ.</p>
 					</div>
@@ -245,11 +229,8 @@
 			<li class="item_team">
 				<div class="photo_team low" id="mila"></div>
 				<div class="text_team">
-					<div class="text_team_title">
-						<h3>Мила Рыжкова</h3>
-						<p class="arrow" id="arrow_mila" onclick="show('mila');">&#9658;</p>
-					</div>
-					<div class="desc_team" id="desc_team_mila">
+					<h3>Мила Рыжкова</h3>
+					<div class="desc_team">
 						<h4>PR, маркетинг</h4>
 						<p>По всем вопросам сотрудничества и рекламы писать только Миле.</p>
 					</div>
@@ -258,7 +239,7 @@
 		</ul>
 	</section>
 
-	<section id="section_order">
+	<section class="section_order">
 		<h2 class="section_title section_title_order">Закажите доставку</h2>
 		<form class="form">
 			<div class="col_form">
@@ -332,7 +313,7 @@
 		<p align="center"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad772753117d1b0c85c978791dc0e05aed19453861c8230bb75bdfed65ecde501&amp;source=constructor" width="1780" height="920" frameborder="0"></iframe>
 	</div>
 
-	<section id="section_footer">
+	<section class="section_footer">
 		<div id="footer_contacts">
 			<span id="footer_locaion">Москва, ул.Новый Арбат, д.31/12</span>
 			<div class="footer_tel">
