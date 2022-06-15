@@ -1,0 +1,106 @@
+.why {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5% 0;
+  z-index: 100;
+  position: relative;
+}
+
+.desc_2 {
+  width: 50%;
+  margin-left: 25%;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.text_2 {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.list_2 {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.circle_2 {
+  width: 175px;
+  height: 175px;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s ease-in-out;
+}
+
+.circle_2:hover {
+  transform: rotateY(45deg);
+}
+
+.title_2 {
+  margin: 20px 0;
+  font-weight: 800;
+  font-size: 32px;
+  color: #000;
+}
+
+.separator {
+  height: 100%;
+  padding-top: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.why_leaf {
+  position: absolute;
+  left: 0;
+}
+
+.why_berries {
+  position: absolute;
+  left: 0;
+  bottom: -150px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1335px) {
+  .desc_2 { width: 80%; margin-left: 10%; font-size: 18px; text-align: center; }
+  .circle_2 { height: 125px; width: 125px; }
+  .icon_2 { height: 90px; width: 90px; }
+  .why_leaf { display: none; }
+  .why_berries { display: none; }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .why { height: 170vh; }
+  .desc_2 { width: 80%; margin-left: 10%; font-size: 18px; text-align: center; }
+  .list_2 { height: 120vh; justify-content: space-between; }
+  .separator { display: none; }
+  .circle_2 { height: 125px; width: 125px; }
+  .icon_2 { height: 90px; width: 90px; }
+  .list_2 { flex-direction: column; }
+  .why_leaf { display: none; }
+  .why_berries { display: none; }
+}

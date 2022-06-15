@@ -1,0 +1,207 @@
+.bars {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5% 0;
+  background-color: #f8faf9;
+  border-bottom: solid 2px #eee;
+}
+
+.carousel-wrapper {
+  height: 90%;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow-bars {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+.arrow-prev {
+  left: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+  right: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.light {
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .arrow-bars,
+  .light .arrow-bars {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+}
+
+[id^="item"] {
+  display: none;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url('../img/chocco2.png');
+  background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 10%;
+}
+
+.item-2 {
+  background: url('../img/chocco.png');
+  background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 10%;
+}
+
+*:target~.item-1 {
+  opacity: 0;
+}
+
+#item-1:target~.item-1 {
+  opacity: 1;
+}
+
+#item-2:target~.item-2 {
+  z-index: 3;
+  opacity: 1;
+}
+
+.slide {
+  width: 50%;
+  height: 100%;
+  margin-left: 50%;
+  padding: 0 5%;
+}
+
+.title_slide {
+  text-align: justify;
+  font-size: 44px;
+  color: #000;
+  text-transform: uppercase;  
+}
+
+.slide_img {
+  width: 15%;
+  position: absolute;
+  z-index: 100;
+  bottom: -25vw;
+  right: 0;
+}
+
+.desc_slide {
+  width: 80%;
+  margin: 5% 0;
+  text-align: justify;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.info_slide, .cost_slide {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cost_slide {
+  justify-content: space-between;
+  margin: 10% 0;
+}
+
+.item_slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-right: 20%;
+}
+
+.value_slide {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.num_slide {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.price_slide {
+  font-size: 44px;
+  color: #000;
+  text-transform: uppercase;  
+}
+
+.slide_button {
+  position: relative;
+  z-index: 100;
+  width: 200px;
+  height: 75px;
+  background-color: #0f5a47;
+  border: none;
+  border-radius: 37.5px;
+  transition: .3s ease-in-out;
+
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #fff;
+}
+
+.slide_button:hover {
+  background-color: #14775f;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .title_slide { text-align: center; font-size: 34px; }
+  .desc_slide { width: 100%; font-size: 20px; }
+  .carousel-item { background-size: 50%; background-position: 0%; }
+  .price_slide { font-size: 36px; }
+  .slide_button {
+    width: 170px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .info_slide { flex-direction: column; align-items: flex-start; }
+  .value_slide { margin: 5px 0; }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+}

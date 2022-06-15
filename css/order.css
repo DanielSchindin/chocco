@@ -1,0 +1,132 @@
+.section_order {
+  width: 100%;
+	height: 90vh;
+  position: relative;
+  background-image: url('../img/pattern.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9% 0;
+}
+
+.section_title_order {
+  color: #0f5a47;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 70%;
+}
+
+.col_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.row-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2%;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+}
+
+.form-label > span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f5a47;
+}
+
+.input_form {
+  margin-top: 0.25em;
+  height: 8vh;
+  font-size: 1.5em;
+  width: 100%;
+  border-radius: 0;
+  padding: 0 5%;
+  border: none;
+  outline: none;
+}
+
+.input_form:focus {
+  outline: 3px solid #dde3bd;
+}
+
+.street { width: 100%; }
+.addr { width:  22.5%; }
+.comment { height: 25vh; width: 100%; }
+.comment > textarea { padding: 2% 5%; height: 100%; }
+
+.radio, .checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f5a47;
+}
+.radio > input { width: 1em; margin: 0; margin-right: 0.5em; }
+.radio > input:focus { outline: none; }
+.checkbox > input { height: 1.5em; width: 1.5em; }
+
+.btns-form {
+  position: absolute;
+  bottom: -10vh;
+}
+
+.button-form {
+  position: relative;
+  z-index: 100;
+  width: 200px;
+  height: 75px;
+  background-color: #0f5a47;
+  border: none;
+  border-radius: 37.5px;
+  transition: .3s ease-in-out;
+
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #fff;
+}
+
+.button-form:hover {
+  background-color: #14775f;
+}
+
+.button-form-reset {
+  width: 200px;
+  height: 75px;
+  border: none;
+  color: #0f5a47;
+  font-weight: 600;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+}
