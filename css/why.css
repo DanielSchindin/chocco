@@ -55,7 +55,7 @@
 }
 
 .circle_2:hover {
-  transform: rotateY(45deg);
+  transform: rotateY(180deg);
 }
 
 .title_2 {
